@@ -1,0 +1,86 @@
+header{
+  position:sticky;
+  top: 0;
+  z-index: 200;
+ transition:transform 300ms;
+ border-top:1px solid transparent ;
+
+}
+.header{
+  display:flex;
+  padding:1.2em 1.5em;
+  background-color: black;
+  justify-content:space-between;
+  font-size: 1.8rem;
+ position: absolute;
+ top:-1px;
+ right: 0;
+ left: 0;
+ z-index: 101;
+background-color: black;
+
+}
+header .logo{
+  font-weight: lighter;
+}
+#burger{
+  cursor:pointer;
+}
+
+.move-up{
+  transform:translateY(-103px);
+}
+nav{
+  display: flex;
+  background-color:black;
+  height: 90vh;
+  position: absolute;
+  top:100px;
+  right: 0;
+  left: 0;
+  z-index: 103;
+  align-items:center;
+  padding-left: 2em;
+  visibility: hidden;
+  opacity: 0;
+  transition:200ms ease-in-out ;
+}
+nav a{
+  position: relative;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 1rem;
+  z-index: 1;
+}
+nav .nav-sub-container div{
+  margin: 2em 0em;
+  padding: 0rem 1rem;
+  cursor: pointer;
+}
+nav a::before{
+  content: "";
+  position: absolute;
+  border-right: 2px solid grey;
+  border-left:  2px solid grey;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-radius: .1vmax;
+  top: 18px;
+  right: -7px;
+  left:-7px;
+  bottom: 18px;
+  z-index: -1;
+opacity: 0;
+transition: opacity 300ms ease-in-out;
+}
+nav .nav-sub-container div:hover > a::before{
+opacity: 1;
+}
+
+nav.visible{
+  
+  visibility:visible;
+  opacity: 1;
+}

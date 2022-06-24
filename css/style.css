@@ -1,0 +1,61 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  line-height:1.5;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color:white;
+  height:auto;
+}
+/* iframe css here at bottom*/
+.if-container{
+  height: 50vh;
+  width: 100%;
+  margin-top:12em ;
+  position:relative;
+
+}
+.if-container .play-btn-container{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  width:80px;
+  height:80px;
+  background-image:url("../source-files/play-btn.png");
+  background-position-x: 30px;
+  background-position-y: 27px;
+  background-size: 27px;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.808);
+  border-radius: 50%;
+  transition: all 150ms ease-in-out;
+}
+.if-container .play-btn-container:hover{
+  /* transform-origin: center;
+  transform: scale(2) translate(-50%,-50%); */
+  width: 90px;
+  height: 90px;
+  background-size: 29px;
+  background-position-x: 34px;
+  background-position-y: 32px;
+  background-color:rgb(8, 8, 8);
+
+}
+
+footer{
+  padding:3em;
+  text-align: center;
+  height: 40vh;
+  font-size: 1.5rem;
+  color: #999;
+  background-color: #111;
+  margin-top: 10rem;
+}
